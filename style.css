@@ -10,14 +10,21 @@ body {
 }
 
 .imgStyle {
-  max-height: 210px;
+  max-height: 75px;
 }
 
-.board {
+.grid {
   display: flex;
   flex-wrap: wrap;
-  width: 80%;
+  width: 100%;
   justify-content: center;
+}
+
+.line {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 header {
@@ -28,10 +35,10 @@ header {
 }
 
 .header {
-    width: 75%;
-    padding: 15px;
-    display: flex;
-    align-items: center;
+  width: 75%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
 }
 
 .card {
@@ -40,46 +47,75 @@ header {
   justify-content: center;
   text-align: center;
   border: 1px solid grey;
-  margin: 10px;
+  margin: 0px 10px 10px 10px;
   width: 260px;
   padding: 20px;
   position: relative;
 }
 
-.desc {
-  padding: 10px;
+.cardList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid grey;
+  margin: 0px 10px 10px 10px;
+  width: 80%;
+  padding: 20px;
+  position: relative;
 }
 
 .btn {
   background-color: rgb(69, 228, 146);
   color: whitesmoke;
-  font-size: 1.1rem;
-  padding: 20px;
+  font-size: 1rem;
+  padding: 10px;
   border: none;
   border-radius: 50px;
   outline: none;
+  width: 80%;
 }
 .btn:hover {
   cursor: pointer;
 }
 
-.price {
-  padding: 15px;
-  width: fit-content;
+.priceLine {
+  display: flex;
+  justify-content: center;
+}
+
+.priceGrid {
   position: absolute;
   top: 0;
   right: 0;
 }
 
-.priceHT,
-.priceTTC {
-  border: 1px solid black;
+.priceHTGrid,
+.priceTTCGrid {
+  border: 1px solid grey;
   padding: 5px;
-  margin-bottom: 15px;
+  margin: 15px 15px 0 0;
   background-color: white;
+  font-size: 0.85rem;
 }
+
+.priceHTLine,
+.priceTTCLine {
+  border: 1px solid grey;
+  padding: 5px;
+  background-color: white;
+  font-size: 0.85rem;
+}
+.priceTTCLine {
+  margin-left: 15px;
+}
+
 p {
   margin: 0;
+}
+
+.desc {
+  font-size: 0.9rem;
 }
 
 .logo {
@@ -96,7 +132,69 @@ p {
 }
 
 .mainTitle {
-    padding-left: 15px;
-    border-left: 1px solid grey;
-    font-size: 1.3rem;
+  padding-left: 15px;
+  border-left: 1px solid grey;
+  font-size: 1.3rem;
+}
+
+.affichage {
+  display: flex;
+  justify-content: left;
+  width: 75%;
+  padding: 15px;
+  align-items: center;
+}
+
+.gridBtn,
+.lineBtn {
+  border: 1px solid grey;
+  border-radius: 50%;
+  background-color: white;
+  padding: 10px;
+  margin: 0 20px;
+  width: 50px;
+  height: 50px;
+  outline: none;
+}
+
+@media (min-width: 576px) {
+  .imgStyle {
+    max-height: 150px;
+  }
+
+  .grid,
+  .line {
+    width: 90%;
+  }
+
+  .descBtnLine {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+  .desc, .priceLine {
+      padding-bottom: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .imgStyle {
+    max-height: 210px;
+  }
+
+  .descBtnLine {
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+  }
+
+  .grid,
+  .line {
+    width: 80%;
+  }
 }

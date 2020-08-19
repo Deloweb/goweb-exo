@@ -1,5 +1,5 @@
 const product1 = new Product(
-  "Vase en terre cuiste",
+  "Vase en terre cuite",
   "images/vase.jpg",
   23.2,
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
